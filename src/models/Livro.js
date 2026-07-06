@@ -24,7 +24,7 @@ const livroSchema = new mongoose.Schema(
       type: Number,
       validate: {
         validator: (valor) => {
-          return valor => 10 && valor <= 5000;
+          return valor >= 10 && valor <= 5000;
         },
         message: "O número de páginas deve estar entre 10 e 5000. Valor Fornecido: {VALUE}"
       }
@@ -32,6 +32,6 @@ const livroSchema = new mongoose.Schema(
   }
 );
 
-const livros= mongoose.model("livros", livroSchema);
+const livros = mongoose.model("livros", livroSchema);
 
 export default livros;
