@@ -15,10 +15,10 @@ const livroSchema = new mongoose.Schema(
     editora: {
       type: String, 
       required: [true, "A editora é obrigatória."],
-      enum: {
-        values: ["HarperCollins"],
-        message: "A editora {VALUE} não é um valor permitido"
-      }
+      // enum: {
+      //   values: ["HarperCollins"],
+      //   message: "A editora {VALUE} não é um valor permitido"
+      // }
     },
     numeroPaginas: {
       type: Number,
